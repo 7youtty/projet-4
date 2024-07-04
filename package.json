@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "hello": "echo 'bonjour tout le monde'",
+        "compiler": "node-sass -w main.scss css/style.css "
+    }
+}

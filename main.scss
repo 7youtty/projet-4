@@ -4,6 +4,7 @@
 
 }
 
+
 /*************Header**********/
 
 
@@ -49,14 +50,16 @@
 }
 .buttonexplore{
     border-radius: 5rem;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+   // background: linear-gradient(193.33deg, #9356DC -11.43, #FF79DA 123.93%);
     border: none;
     width: 50%;
     text-align: center;
     padding: 30px;
     margin-left: 22%;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    //box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: 2rem;
+    background: linear-gradient(0deg, #9356DC -11%, #FF79DA 123%);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .buttonexplore a{
@@ -66,7 +69,11 @@
 }
 .buttonexplore:hover {
     filter: brightness(1,1);
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 1);
+   // box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 1);
+    //background: linear-gradient(193.33deg, #9356DC -8, #FF79DA 123.93%);
+    background: linear-gradient(0deg, #a978e3 -11%, #ffa2e5 123%);
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.2);
+    
 }
 
 /*********************FONCTIONNEMENT********************/
@@ -123,3 +130,93 @@
     font-size: larger;
 }
 
+/**************************Restaurants************************/
+
+.fond2 {
+    background-color: whitesmoke;
+    margin-top: 12%;
+}
+.fond2 h1 { 
+    padding-top: 100px;
+    margin-bottom: -50px;
+    margin-left: 80px;
+    font-size: 50px;
+}
+
+.spacerestaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 70px;
+    padding: 10% 0% 20% 0%;
+    
+}
+.cardresto img {
+    object-fit: cover;
+    width: 100%;
+     border-radius: 20px 20px 0px 0px; 
+     height: 320px;
+
+}
+.cardresto {
+    border-radius: 25px;
+    background-color: white;
+    width: 85%;
+    height: 500px;
+    font-size: xx-large;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+.cardresto h3 {
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 45px;
+}
+.cardresto p {
+    margin-top: -30px;
+    margin-left: 20PX;
+    font-size: 40PX;
+    font-weight: 300;
+}
+.positionfav {
+    position: relative;
+    left: 700px;
+    bottom: 140px;
+    font-size: 70px;
+    
+   
+    
+   &:hover {
+    color: magenta;
+}
+}
+
+/********************************footer**************************/
+
+.fond3 { 
+    background: #353535;
+    margin-top: -30px;
+    padding-left: 70PX;
+}
+.fond3 p {
+    font-family: Shrikhand ;
+    color: white;
+    font-style: italic;
+    font-size: 2rem;
+    padding: 70px 0px 22px 0px;
+    
+}
+.spacefooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1rem;
+}
+.spacefooter article {
+    font-size: 2.5rem;
+    color:white;
+}
+.spacefooter2 {
+    padding-right: 20px;
+}

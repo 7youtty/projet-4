@@ -4,8 +4,8 @@
 /*************Header**********/
 .logo {
   text-align: center;
-  margin-bottom: 2%;
-  margin-top: 4%; }
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
 .barresearch {
   background-color: #EAEAEA;
@@ -189,9 +189,16 @@
 
 /********************************************Jay winningtone********************************************/
 /********************************header******************************/
+.backaccueil {
+  font-size: 35px;
+  color: #353535;
+  margin-top: 35px;
+  margin-left: 35px; }
+
 .logo2 {
   text-align: center;
-  padding: 30px; }
+  margin-top: -30px;
+  margin-bottom: 30px; }
 
 .photorestaurant1 img {
   width: 100%;
@@ -219,9 +226,31 @@
 .icon2 {
   font-size: 4rem; }
 
+.animicon1 {
+  position: absolute;
+  left: 810px; }
+  .animicon1:hover {
+    color: linear-gradient(0deg, #9356DC -11%, #FF79DA 123%); }
+
+.animicon2 {
+  position: absolute;
+  left: 810px;
+  opacity: 0; }
+  .animicon2:hover {
+    color: linear-gradient(0deg, #9356DC -11%, #FF79DA 123%);
+    opacity: 1; }
+
 .partierepas {
   font-size: 2rem;
   margin-left: 20px; }
+  .partierepas::after {
+    content: "";
+    width: 5rem;
+    height: 0.5rem;
+    background-color: #99e2d0;
+    position: absolute;
+    bottom: 17.5rem;
+    left: 1.8rem; }
 
 .cardplat {
   border-radius: 25px;
@@ -248,6 +277,10 @@
 
 .spacesubtitleetape {
   padding: 30px 0px 80px 0px; }
+
+.fond4 {
+  background-color: #F6F6F6;
+  height: 200px; }
 
 .buttoncommande {
   border-radius: 5rem;

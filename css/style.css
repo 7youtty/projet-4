@@ -1,11 +1,15 @@
+@charset "UTF-8";
 :root {
   font-family: roboto,sans-serif; }
 
 /*************Header**********/
 .logo {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px; }
+
+.logo img {
+  width: 400px; }
 
 .barresearch {
   background-color: #EAEAEA;
@@ -27,6 +31,9 @@
   background-color: whitesmoke;
   padding-bottom: 15%;
   padding-top: 4%; }
+
+.dekstopscreen {
+  visibility: hidden; }
 
 .titlespace {
   text-align: center;
@@ -84,24 +91,25 @@
   .btnetape:hover {
     cursor: pointer; }
 
+.btnetape:hover .icon {
+  color: #9356DC; }
+
 .icon {
   color: #7E7E7E;
   padding-right: 0px;
   margin-left: 6%; }
-  .icon:hover {
-    color: #9356DC; }
 
 .ordrebtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: -10px;
   height: 45px;
+  flex-direction: column;
   aspect-ratio: 1 / 1;
   color: white;
   border-radius: 50%;
-  background: #9356DC; }
+  background: #9356DC;
+  margin-left: -265px; }
 
 /**************************Restaurants************************/
 .fond2 {
@@ -154,9 +162,33 @@
   font-weight: 300; }
 
 .positionfav {
-  font-size: 70px; }
-  .positionfav:hover {
-    color: magenta; }
+  margin-bottom: 130px; }
+
+.iconfav1 {
+  font-size: 60px;
+  position: absolute;
+  left: 791px;
+  opacity: 1; }
+  .iconfav1:hover {
+    color: magenta;
+    opacity: 0; }
+
+.iconfav2 {
+  font-size: 60px;
+  position: absolute;
+  left: 791px;
+  opacity: 0; }
+  .iconfav2:hover {
+    color: magenta;
+    opacity: 1; }
+
+.badgenew {
+  border: none;
+  background-color: #99E2D0;
+  color: #008766;
+  width: 40%;
+  text-align: center;
+  padding: 10PX; }
 
 /********************************footer**************************/
 .fond3 {
@@ -190,15 +222,18 @@
 /********************************************Jay winningtone********************************************/
 /********************************header******************************/
 .backaccueil {
-  font-size: 35px;
+  font-size: 45px;
   color: #353535;
-  margin-top: 35px;
-  margin-left: 35px; }
+  margin-top: 40px;
+  margin-left: 40px; }
 
 .logo2 {
   text-align: center;
-  margin-top: -30px;
+  margin-top: -40px;
   margin-bottom: 30px; }
+
+.logo2 img {
+  width: 350px; }
 
 .photorestaurant1 img {
   width: 100%;
@@ -243,14 +278,14 @@
 .partierepas {
   font-size: 2rem;
   margin-left: 20px; }
-  .partierepas::after {
-    content: "";
-    width: 5rem;
-    height: 0.5rem;
-    background-color: #99e2d0;
-    position: absolute;
-    bottom: 17.5rem;
-    left: 1.8rem; }
+
+.partierepas span {
+  margin-bottom: 0px; }
+
+.partierepas .underline {
+  border-bottom: 5px solid #99e2d0;
+  width: 65px;
+  margin-top: 10px; }
 
 .cardplat {
   border-radius: 25px;
@@ -300,3 +335,30 @@
     background: linear-gradient(0deg, #a978e3 -11%, #ffa2e5 123%);
     box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer; }
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+/* DEKSTOP */
+@media (min-width: 768px) {
+  .phonescreen {
+    visibility: hidden; }
+  .dekstopscreen {
+    visibility: visible; }
+  .buttonexplore {
+    margin-top: -350px;
+    width: 25%;
+    margin-left: 35%;
+    margin-bottom: -150px; }
+  .etapecommande {
+    flex-direction: row; }
+  .ordrebtn {
+    display: flex;
+    flex-direction: row;
+    margin-left: -275px; }
+  .spacerestaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100px;
+    row-gap: 110px; }
+  .cardresto {
+    width: 45%; } }

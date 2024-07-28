@@ -9,10 +9,12 @@
 
 .logo {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
 }
-
+ .logo img {
+    width: 400px;
+ }
 
 .barresearch {
     background-color:#EAEAEA;
@@ -36,6 +38,10 @@
     padding-top: 4%;
     
 }
+.dekstopscreen {
+visibility: hidden;
+}
+
 .titlespace {
     text-align: center;
     font-size: 4rem;
@@ -90,15 +96,7 @@
 }
 
 .btnetape {
-    // border-radius: 50px;
-    // background-color: #f6f6f6;
-    // border: transparent;
-    // padding: 65PX;
-    // width: 70%;
-    // font-size: xx-large;
-    // margin-left: -20px;
-    // box-shadow: rgba(50, 50, 93, 0) 0px 5px 20px 0px, rgba(0, 0, 0, 0.3) -1px 5px 30px -10px;
-
+ 
     display: flex;
     background: #F6F6F6;
     justify-content: center;
@@ -107,57 +105,40 @@
     font-size: x-large;
     width: 90%;
     align-items: center;
-
     height: 125px;
     gap: 2%;
 
-    &:hover {
+     &:hover{
         cursor: pointer;
-    }
+     }
+
+   
+}
+.btnetape:hover .icon{
+    color: #9356DC;
+    
+
 }
 .icon {
     color:#7E7E7E;
     padding-right: 0px;
     margin-left: 6%;
-
-    &:hover {
-        color: #9356DC;
-    }
-
-    // &__list {
-    //     padding-right: 35px;
-    //     color: #7E7E7E;
-
-    // }
-
-    // &__purple {
-    //     color: #9356DC;
-    //     padding-right: 35px;
-    // }
+ 
 }
 
+
 .ordrebtn {
-    // height: 4rem;
-    // width: 4rem;
-    // border-radius: 2rem;
-    // background-color: #9356DC;
-    // border: transparent;
-    // text-align: center;
-    // color: white;
-    // position: absolute;
-    // left: 55px;
-    // font-size: larger;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: -10px;
     height: 45px;
+    flex-direction: column;
     aspect-ratio: 1 / 1;
     color: white;
     border-radius: 50%;
     background: #9356DC;
+    margin-left: -265px;
 }
 
 
@@ -220,16 +201,38 @@
     font-weight: 300;
 }
 .positionfav {
-    // position: relative;
-    // left: 700px;
-    // bottom: 140px;
-    font-size: 70px;
-    
-   
+    margin-bottom: 130px;
+}
+.iconfav1 {
+    font-size: 60px;
+    position: absolute;
+    left: 791px;
+    opacity: 1;
     
    &:hover {
     color: magenta;
+    opacity: 0;
 }
+}
+.iconfav2 {
+    font-size: 60px;
+    position: absolute;
+    left: 791px;
+    opacity: 0;
+
+
+    &:hover {
+        color: magenta;
+        opacity: 1;
+}}
+.badgenew {
+    border: none;
+    background-color: #99E2D0;
+    color: #008766;
+    width: 40%;
+    text-align: center;
+   padding: 10PX;
+
 }
 
 /********************************footer**************************/
@@ -269,15 +272,18 @@
 
 /********************************header******************************/
 .backaccueil {
-    font-size: 35px;
+    font-size: 45px;
     color: #353535;
-    margin-top: 35px;
-    margin-left: 35px;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 .logo2 {
    text-align: center;
-  margin-top: -30px;
+  margin-top: -40px;
   margin-bottom: 30px;
+}
+.logo2 img{
+    width: 350px;
 }
 
 .photorestaurant1 img{
@@ -341,15 +347,16 @@
     font-size: 2rem ;
     margin-left: 20px;
 
-    &::after{
-        content: "";
-        width: 5rem;
-        height: 0.5rem;
-        background-color: #99e2d0;
-        position: absolute;
-        bottom: 17.5rem;
-        left: 1.8rem;
-    }
+  
+}
+.partierepas span{
+    margin-bottom: 0px;
+
+}
+.partierepas .underline{
+    border-bottom: 5px solid #99e2d0;
+    width: 65px;
+    margin-top: 10px;
 }
 
 .cardplat {
@@ -415,3 +422,45 @@
     }
  }
  
+/* Le code ci-dessous correspond à la version responsive uniquement */
+ 
+/****** Media queries ***********/
+/* DEKSTOP */ 
+@media (min-width: 768px){
+
+    .phonescreen {
+       visibility: hidden;
+    }
+    .dekstopscreen {
+        visibility: visible;
+    }
+    .buttonexplore {
+        margin-top: -350px;
+        width: 25%;
+        margin-left: 35%;
+        margin-bottom: -150px;
+    }
+
+    .etapecommande {
+        flex-direction: row;
+        
+    }
+   
+    .ordrebtn {
+        display: flex;
+        flex-direction: row;
+        margin-left: -275px;
+    }
+
+    .spacerestaurants{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100px;
+    row-gap: 110px;
+    
+}
+
+.cardresto {
+    width: 45%;
+}
+}

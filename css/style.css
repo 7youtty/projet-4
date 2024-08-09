@@ -80,7 +80,7 @@
 .btnetape {
   display: flex;
   background: #F6F6F6;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 40px;
   font-size: x-large;
@@ -93,6 +93,13 @@
 
 .btnetape:hover .icon {
   color: #9356DC; }
+
+.btnetape .ordrebtnText {
+  width: 100%;
+  text-align: left; }
+
+.btnetape .ordrebtnText i {
+  margin-right: 10px; }
 
 .icon {
   color: #7E7E7E;
@@ -109,7 +116,7 @@
   color: white;
   border-radius: 50%;
   background: #9356DC;
-  margin-left: -265px; }
+  margin-left: -5%; }
 
 /**************************Restaurants************************/
 .fond2 {
@@ -146,19 +153,16 @@
 
 .spacesubtitlerestaurants {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding-right: 40px; }
 
 .cardresto h3 {
   margin-top: 15px;
-  margin-left: 20px;
-  font-size: 45px; }
+  margin-left: 20px; }
 
 .cardresto p {
   margin-top: -30px;
   margin-left: 20PX;
-  font-size: 40PX;
   font-weight: 300; }
 
 .positionfav {
@@ -166,29 +170,25 @@
 
 .iconfav1 {
   font-size: 60px;
-  position: absolute;
-  left: 791px;
-  opacity: 1; }
+  transition: background-color 1ms; }
   .iconfav1:hover {
-    color: magenta;
-    opacity: 0; }
+    background-color: magenta; }
 
 .iconfav2 {
   font-size: 60px;
-  position: absolute;
-  left: 791px;
-  opacity: 0; }
+  transition: color 1ms; }
   .iconfav2:hover {
-    color: magenta;
-    opacity: 1; }
+    color: magenta; }
 
 .badgenew {
   border: none;
   background-color: #99E2D0;
   color: #008766;
-  width: 40%;
   text-align: center;
-  padding: 10PX; }
+  padding: 6PX 10px;
+  position: absolute;
+  margin-top: 6px;
+  right: 13%; }
 
 /********************************footer**************************/
 .fond3 {
@@ -219,7 +219,7 @@
 .spacefooter2 {
   padding-right: 20px; }
 
-/********************************************Jay winningtone********************************************/
+/********************************************Page Restaurants********************************************/
 /********************************header******************************/
 .backaccueil {
   font-size: 45px;
@@ -339,7 +339,7 @@
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
 /* DEKSTOP */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .phonescreen {
     visibility: hidden; }
   .dekstopscreen {
@@ -352,9 +352,7 @@
   .etapecommande {
     flex-direction: row; }
   .ordrebtn {
-    display: flex;
-    flex-direction: row;
-    margin-left: -275px; }
+    margin-left: -3%; }
   .spacerestaurants {
     flex-direction: row;
     flex-wrap: wrap;

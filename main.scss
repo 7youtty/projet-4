@@ -183,57 +183,30 @@ visibility: hidden;
     border-radius: 25px;
     background-color: white;
     width: 85%;
-    height: 500px;
-    font-size: xx-large;
+    font-size: 1.6em;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
     
 }
 .spacesubtitlerestaurants {
 
- display: flex;
-//  align-items: center; 
- justify-content: space-between;
- padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+    position: relative;
 }
 
 .cardresto h3 {
     margin-top: 15px;
     margin-left: 20px;
-    // font-size: 45px;
+    
 }
 .cardresto p {
     margin-top: -30px;
     margin-left: 20PX;
-    // font-size: 40PX;
     font-weight: 300;
 }
-.positionfav {
-    margin-bottom: 130px;
 
-}
-.iconfav1 {
-    font-size: 60px;
-   // opacity: 1;
-    transition: background-color 1ms;
-   
-    
-   &:hover {
-    background-color: magenta;
-    //opacity: 0;
-   
-}
-}
-.iconfav2 {
-    font-size: 60px;
-   // opacity: 0;
-   
-    transition: color 1ms;
-
-    &:hover {
-        color: magenta;
-       // opacity: 1;
-
-}}
 .badgenew {
     border: none;
     background-color: #99E2D0;
@@ -242,8 +215,62 @@ visibility: hidden;
     padding: 6PX 10px;
     position: absolute;
     margin-top: 6px;
-    right: 13%;
+    right: 9%;
 
+}
+
+.btn-coeur:hover::after {
+    transform: scaleY(0);
+}
+.btn-coeur:hover .btn-coeur__vi {
+    opacity: 0;
+}
+.btn-coeur:hover .btn-coeur__pl {
+    transform: scale(1);
+}
+.btn-coeur--accu {
+    cursor: pointer;
+    position: absolute;
+    width: 49px;
+    height: 45px;
+    top: 25px;
+    right: 24px;
+}
+
+.btn-coeur {
+    font-size: 1.5em;
+}
+.btn-coeur--accu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 24 px ;
+    height: 24 px ;
+    opacity: 1;
+    z-index: 1;
+    transition: transform 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+    transform-origin: top;
+    background: #f6f6f6;
+    background: white;
+}
+.btn-coeur__vi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 100;
+    z-index: 2;
+}
+.btn-coeur__pl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: linear-gradient(176deg, #9356DC 0%, #FF79DA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /********************************footer**************************/
@@ -324,35 +351,7 @@ visibility: hidden;
     font-size: 4.5rem;
     font-family:shrikhand;
 }
-.icon2 {
-    font-size: 4rem;
-}
 
-.animicon1{
-    position: absolute;
-    left: 810px;
-    
-
-   &:hover{
-    color: linear-gradient(0deg, #9356DC -11%, #FF79DA 123%);
-
-} }
-
-.animicon2 {
-    position: absolute;
-    left: 810px;
-    
-    opacity: 0;
-    
-    &:hover{
-
-    color:linear-gradient(0deg, #9356DC -11%, #FF79DA 123%);
-   
-    opacity: 1;
-
-}
-
-    }
 
 .partierepas{
     font-size: 2rem ;
@@ -472,4 +471,21 @@ visibility: hidden;
 .cardresto {
     width: 45%;
 }
+}
+
+/*******************page de menu*****************************/
+
+.cardmenu {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 2.5%;
+}
+.spacetitle2 p {
+   margin-left: 63%;
+   width: 100%;
+}
+.btn-coeur--accu {
+    position: absolute;
+    top: 1000px;
+    width: 50px;
 }

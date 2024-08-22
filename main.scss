@@ -3,7 +3,10 @@
     
 
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 
 /*************Header**********/
 
@@ -219,59 +222,74 @@ visibility: hidden;
 
 }
 
-.btn-coeur:hover::after {
-    transform: scaleY(0);
-}
-.btn-coeur:hover .btn-coeur__vi {
-    opacity: 0;
-}
-.btn-coeur:hover .btn-coeur__pl {
-    transform: scale(1);
-}
-.btn-coeur--accu {
+/**************************************/
+.btn-coeur {
     cursor: pointer;
-    position: absolute;
-    width: 49px;
-    height: 45px;
-    top: 25px;
-    right: 24px;
+    &:hover{
+        &::after {
+            transform: scaleY(0);
+        }
+        .btn-coeur__vi {
+            opacity: 0;
+        }
+        .btn-coeur__pl {
+            transform: scale(1);
+        }
+
+    }
+    &__vi {
+        position: absolute;
+        font-weight: 100;
+        z-index: 2;
+    }
+    &__pl {
+        position: absolute;
+        z-index: 0;
+        background: linear-gradient(176deg, #9356DC 0%, #FF79DA 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &--home, &--menu{
+        position: absolute;
+        &::after {
+            content: "";
+            position: absolute;
+            transition: transform 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+            transform-origin: top;
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+    &--home {
+        font-size: 1.5em;
+        width: 49px;
+        height: 45px;
+        top: 25px;
+        right: 24px;
+        &::after {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+        }
+    }
+    &--menu {
+        font-size: 2.5em;
+        width: 60px;
+        height: 60px;
+        top: 50px;
+        right: 88px;
+        &::after {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #F6F6F6;
+        }
+    }
 }
 
-.btn-coeur {
-    font-size: 1.5em;
-}
-.btn-coeur--accu::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 24 px ;
-    height: 24 px ;
-    opacity: 1;
-    z-index: 1;
-    transition: transform 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
-    transform-origin: top;
-    background: #f6f6f6;
-    background: white;
-}
-.btn-coeur__vi {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-weight: 100;
-    z-index: 2;
-}
-.btn-coeur__pl {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background: linear-gradient(176deg, #9356DC 0%, #FF79DA 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 /********************************footer**************************/
 
@@ -345,10 +363,12 @@ visibility: hidden;
     padding-left: 50px;
     padding-right: 100px;
     align-items: center;
+    position: relative;
 }
 
 .spacetitle2 p {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
+    text-align: center;
     font-family:shrikhand;
 }
 
@@ -386,7 +406,43 @@ visibility: hidden;
     padding-left: 30px;
     padding-right: 30px;
     font-size: xx-large;
+    transition: all 1s ease-out;
+    &:active{
+        margin-right: 200px;
+    }
+    
+}
 
+.detailplat h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -55px;
+
+}
+
+
+.slidecoche {
+    background-color:#99E2D0;
+    width: 20%;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -230px;
+    opacity: 0%;
+     &:hover {
+        opacity: 100%;
+     }
+   
+}
+
+
+.check {
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    
 }
 
 .detailplat p {
@@ -397,6 +453,7 @@ visibility: hidden;
 .detailplat h4 {
    padding-top: 55px;
 }
+
  .spacesubtitleetape {
     padding: 30px 0px 80px 0px;
  }
@@ -466,26 +523,22 @@ visibility: hidden;
     padding: 100px;
     row-gap: 110px;
     
-}
+    }
 
-.cardresto {
-    width: 45%;
-}
-}
+    .cardresto {
+        width: 45%;
+    }
 
+    .cardmenu {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 2.5%;
+    }
+    .spacetitle2 p {
+       width: 100%;
+      
+    }
+  
+}
 /*******************page de menu*****************************/
 
-.cardmenu {
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 2.5%;
-}
-.spacetitle2 p {
-   margin-left: 63%;
-   width: 100%;
-}
-.btn-coeur--accu {
-    position: absolute;
-    top: 1000px;
-    width: 50px;
-}

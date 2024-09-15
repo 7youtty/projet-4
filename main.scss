@@ -1,12 +1,63 @@
 :root {
     font-family: roboto,sans-serif;
-    
+}
 
-}
 a{
-    text-decoration: none;
-    color: black;
-}
+        text-decoration: none;
+        color: black;
+    }
+
+    /********************loader**************************/
+.loader {
+    background-color: #9356DC;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;  
+  }
+
+  .loader__element::after {
+    content: "";
+    border: 20px;
+    border-radius: 50%;
+    border-top:#9356DC ;
+    border-bottom: #FF79DA;
+    border-left: #99E2D0;
+    border-right:#9356DC ;
+    width: 100px;
+    height: 100px; 
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: spin 1s linear infinite ;
+    -o-animation:spin 1s linear infinite ;
+    animation:spin 1s linear infinite ;
+   
+  }
+
+  @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% { 
+        transform: rotate(360deg);
+     }
+  }
+  @-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% { 
+        -webkit-transform: rotate(360deg);
+     }
+  }
+  
 
 /*************Header**********/
 
@@ -20,7 +71,7 @@ a{
  }
 
 .barresearch {
-    background-color:#EAEAEA;
+    background-color:#eaeaea;
     text-align: center;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 3% 3% 3% 22%;
@@ -342,15 +393,17 @@ visibility: hidden;
   margin-top: -40px;
   margin-bottom: 30px;
 }
-.logo2 img{
+.logo2 {
+    img{
     width: 350px;
 }
-
-.photorestaurant1 img{
+}
+.photorestaurant1 {
+    img{
     width: 100%;
     object-fit: fill;
 }
-
+}
 /********************************carte menu*************************/
 
 .cardmenu {
@@ -371,10 +424,12 @@ visibility: hidden;
     position: relative;
 }
 
-.spacetitle2 p {
+.spacetitle2 {
+     p {
     font-size: 2.5rem;
     text-align: center;
     font-family:shrikhand;
+}
 }
 
 
@@ -384,79 +439,31 @@ visibility: hidden;
 
   
 }
-.partierepas span{
+.partierepas {
+    span{
     margin-bottom: 0px;
-
 }
-.partierepas .underline{
+}
+
+.partierepas{
+     .underline{
     border-bottom: 5px solid #99e2d0;
     width: 65px;
     margin-top: 10px;
-}
-
-.cardplat {
-    border-radius: 25px;
-    background-color: white;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 30px 20px 30px 20px;
-}
-.detailplat {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: xx-large;
-    transition: all 1s ease-out;
-    &:active{
-        margin-right: 200px;
-    }
-    
-}
-
-.detailplat h4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: -55px;
-
-}
-
-
-.slidecoche {
-    background-color:#99E2D0;
-    width: 20%;
-    border-radius: 0px 15px 15px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: -230px;
-    opacity: 0%;
-     &:hover {
-        opacity: 100%;
      }
-   
 }
 
-
-.check {
-    align-items: center;
-    font-size: 50px;
-    color: white;
-    
-}
-
-.detailplat p {
+.detailplat {
+    p {
     margin-top: -20px;
    
 }
+}
 
-.detailplat h4 {
+.detailplat {
+    h4 {
    padding-top: 55px;
+}
 }
 
  .spacesubtitleetape {
@@ -496,7 +503,6 @@ visibility: hidden;
  
 
  .menu-plat {
-    // box-shadow: 2px 5px 13px -1px rgb(35 35 35 / 13%);
     box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.2);
     position: relative;
     width: 95%;
@@ -510,13 +516,15 @@ visibility: hidden;
     cursor: pointer;
 
     &__titre {
-        font-size: 1.8rem;
-        font-weight: 500;
+        font-size: 35px;
+        font-weight: bolder;
         width: 100%;
         transition: width 0.75s;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        margin-left: 20px;
+        margin-top: 15px;
     }
     &__flex {
         display: flex;
@@ -531,22 +539,24 @@ visibility: hidden;
             white-space: nowrap;
             width: 100%;
             transition: width 0.75s;
-            margin-top: -10px;
-            font-size: 30px;
+            margin-top: -15px;
+            font-size: 32px;
+            margin-left: 20px;
         }
         .prix {
             font-weight: 500;
             padding-left: 3px;
             transition: transform 0.5s 0.05s;
-            font-size: 25px;
+            font-size: 35px;
+            margin-top: -15px;
         }
     }
     &__anim {
         position: absolute;
         background: #99E2D0;
-        right: -60px;
+        right: -80px;
         top: 0;
-        width: 60px;
+        width: 80px;
         height: 100%;
         transition: transform 0.5s;
         text-align: center;
@@ -554,6 +564,7 @@ visibility: hidden;
             color: white;
             font-size: 1.35em;
             line-height: 100px;
+            margin-top: 35%;
         }
     }
     &__liste {
@@ -564,19 +575,22 @@ visibility: hidden;
     &:hover{
         .menu-plat{
             &__titre {
-                width: calc(100% - 60px);
+                width: calc(100% - 80px);
             }
             &__anim {
-                transform: translateX(-60px);
+                transform: translateX(-80px);
             }
         }
         .compo {
-            width: calc(100% - 60px);
+            width: calc(100% - 80px);
         }
         .prix {
-            transform: translateX(-60px);
+            transform: translateX(-80px);
         }
     }
+}
+.cardmenu article {
+
 }
 
 
@@ -628,11 +642,12 @@ visibility: hidden;
         margin-left: 10%;
         margin-bottom: 2.5%;
     }
-    .spacetitle2 p {
+    .spacetitle2 {
+        p {
        width: 100%;
       
-    }
+    }}
   
 }
-/*******************page de menu*****************************/
+
 

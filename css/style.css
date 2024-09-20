@@ -8,32 +8,37 @@ a {
 
 /********************loader**************************/
 .loader {
-  background-color: #9356DC;
+  background-color: white;
   overflow: hidden;
   width: 100%;
   height: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  position: fixed;
+  z-index: 5;
+  animation-name: opacityOff;
+  animation-duration: 1200ms;
+  animation-delay: 3.0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1; }
 
 .loader__element::after {
   content: "";
-  border: 20px;
   border-radius: 50%;
-  border-top: #9356DC;
-  border-bottom: #FF79DA;
-  border-left: #99E2D0;
-  border-right: #9356DC;
+  border-top: 5px solid #9356DC;
+  border-bottom: 5px solid #FF79DA;
+  border-left: 5px solid #99E2D0;
+  border-right: 5px solid #9356DC;
   width: 100px;
   height: 100px;
   margin: auto;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 45%;
+  left: 47%;
   -webkit-animation: spin 1s linear infinite;
   -o-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite; }
@@ -49,6 +54,14 @@ a {
     -webkit-transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(360deg); } }
+
+@keyframes opacityOff {
+  0% {
+    opacity: 1;
+    z-index: 999; }
+  100% {
+    opacity: 0;
+    z-index: -2; } }
 
 /*************Header**********/
 .logo {
@@ -367,6 +380,48 @@ a {
 
 .spacesubtitleetape {
   padding: 30px 0px 80px 0px; }
+
+.menuanim {
+  opacity: 0;
+  -moz-animation: opacityplat 2.5s linear forwards 1s;
+  -webkit-animation: opacityplat 2.5s linear forwards 1s;
+  -o-animation: opacityplat 2.5s linear forwards 1s;
+  -ms-animation: opacityplat 2.5s linear forwards 1s;
+  animation: opacityplat 2.5s linear forwards 1s; }
+
+@keyframes opacityplat {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+
+.menuanim2 {
+  opacity: 0;
+  -moz-animation: opacityplat2 3s linear forwards 2s;
+  -webkit-animation: opacityplat2 3s linear forwards 2s;
+  -o-animation: opacityplat2 3s linear forwards 2s;
+  -ms-animation: opacityplat2 3s linear forwards 2s;
+  animation: opacityplat2 3s linear forwards 2s; }
+
+@keyframes opacityplat2 {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+
+.menuanim3 {
+  opacity: 0;
+  -moz-animation: opacityplat3 3s linear forwards 3s;
+  -webkit-animation: opacityplat3 3s linear forwards 3s;
+  -o-animation: opacityplat3 3s linear forwards 3s;
+  -ms-animation: opacityplat3 3s linear forwards 3s;
+  animation: opacityplat3 3s linear forwards 3s; }
+
+@keyframes opacityplat3 {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
 
 .fond4 {
   background-color: #F6F6F6;

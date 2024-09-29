@@ -66,11 +66,11 @@ a {
 /*************Header**********/
 .logo {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 5px;
   margin-bottom: 30px; }
 
 .logo img {
-  width: 400px; }
+  width: 250px; }
 
 .barresearch {
   background-color: #eaeaea;
@@ -152,7 +152,7 @@ a {
   .btnetape:hover {
     cursor: pointer; }
 
-.btnetape:hover .icon {
+.btnetape:hover.icon {
   color: #9356DC; }
 
 .btnetape .ordrebtnText {
@@ -293,7 +293,7 @@ a {
 /********************************footer**************************/
 .fond3 {
   background: #353535;
-  margin-top: -30px;
+  margin-top: 50px;
   padding-left: 70PX;
   height: 470px; }
 
@@ -333,17 +333,18 @@ a {
   margin-bottom: 30px; }
 
 .logo2 img {
-  width: 350px; }
+  width: 250px; }
 
 .photorestaurant1 img {
   width: 100%;
-  object-fit: fill; }
+  object-fit: cover;
+  height: 450px; }
 
 /********************************carte menu*************************/
 .cardmenu {
   border-radius: 45px 45px 0px 0px;
   background-color: #F6F6F6;
-  margin-top: -130PX;
+  margin-top: -40PX;
   opacity: 99%; }
 
 .spacetitle2 {
